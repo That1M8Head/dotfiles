@@ -5,7 +5,7 @@ screenshot_dir=file:///home/that1m8head
 enable_imgur_upload=true
 action=2
 delay=0
-region=3
+region=1
 show_mouse=0
 show_border=1
 

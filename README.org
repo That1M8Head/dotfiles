@@ -1,0 +1,4 @@
+#+Title: My dotfiles
+#+Author: Arsalan Kazmi
+
+This repo contains my dotfiles... from a semi-broken laptop. Yeah, I'll have it overhauled when I can get an actually good computer to run Arch on.

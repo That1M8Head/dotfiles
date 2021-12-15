@@ -1,0 +1,239 @@
+; Arsalan Kazmi's polybar config
+
+[colours]
+background = #404552
+foreground = #ffffff
+blue = #5294e2
+red  = #dd0000
+
+[bar/arc-dark-t1m8]
+width = 100%
+height = 27
+radius = 0.0
+fixed-center = false
+
+background = ${colours.background}
+foreground = ${colours.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0 
+padding-right = 1
+
+module-margin-left = 1 
+module-margin-right = 1
+
+font-0 = Source Code Pro:size=10;1
+
+modules-left = i3
+modules-center = xwindow
+modules-right = filesystem memory cpu wlan eth battery date powermenu
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+label-maxlen = 150
+label-empty = i3-gaps
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = Disk: %percentage_used%%
+label-mounted-underline = ${colours.blue}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 0 
+label-mode-foreground = #000
+label-mode-background = ${colours.blue}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colours.blue}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-underline = ${colours.blue}
+label-unfocused-padding = 1
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colours.blue}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+label = CPU usage: %percentage:2%%
+label-underline = ${colours.blue}
+
+[module/memory]
+type = internal/memory
+interval = 2
+label = Memory: %percentage_used%%
+label-underline = ${colours.blue}
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+format-connected-underline = ${colours.blue}
+format-disconnected-underline = ${colours.red}
+
+format-connected = <label-connected>
+label-connected = Connected to %essid%
+
+format-disconnected = No wireless
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colours.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colours.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = enp5s0
+interval = 3.0
+format-connected-underline = ${colours.blue}
+format-disconnected-underline = ${colours.red}
+
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colours.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = %d/%m/%Y
+time = %l:%M %p
+
+label = %date% %time%
+label-underline = ${colours.blue}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colours.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colours.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colours.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colours.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colours.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colours.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colours.secondary}
+label-close =  cancel
+label-close-foreground = ${colours.secondary}
+label-separator = |
+label-separator-foreground = ${colours.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 5
+
+; vim:ft=dosini

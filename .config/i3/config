@@ -179,23 +179,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+default_floating_border normal
+default_border none
+
 gaps inner 10 
 
 client.focused		    	#383c4a #404552 #ffffff
 client.unfocused    	    #383c4a #404552 #999999
 client.focused_inactive	    #383c4a #404552 #aaaaaa
 
-new_window normal 0
-new_float  normal 1 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    status_command i3status
-	position top
-	colors {
-	    background #404552
-		focused_workspace #5294e2 #5294e2 #ffffff
-		inactive_workspace #404552 #404552 #888888
-	}
-}
+exec --no-startup-id polybar arc-dark-t1m8

@@ -1,0 +1,14 @@
+{
+  "paused": false,
+  "failed": false,
+  "checking": false,
+  "updating": false,
+  "awaiting_reload": false,
+  "checking_progress": [
+    16,
+    16
+  ],
+  "updates": [],
+  "last_check": 1639599075802,
+  "last_changelog": "updates-26-04-20"
+}

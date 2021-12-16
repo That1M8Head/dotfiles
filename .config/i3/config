@@ -9,8 +9,7 @@ client.focused_inactive	    #383c4a #404552 #aaaaaa
 
 exec --no-startup-id feh     --bg-fill $HOME/nep-wallpaper.jpg 
 exec --no-startup-id polybar arc-dark-t1m8
-
-bindsym $mod+l exec --no-startup-id slock
+exec --no-startup-id mplayer $HOME/winxpstartup.mp3
 
 # Usual stuff
 set $mod Mod4
@@ -20,6 +19,8 @@ font pango:Source Code Pro 10
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
 exec --no-startup-id nm-applet
+
+bindsym $mod+l exec slock
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status

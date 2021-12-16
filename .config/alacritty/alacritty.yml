@@ -6,3 +6,25 @@ window:
 font:
   normal:
     family: Source Code Pro 
+colors:
+  primary:
+    background: '0x171b25'
+    foreground: '0xffffff'
+  normal:
+    black:   '0x282a2e'
+    red:     '0xff0000'
+    green:   '0x23af29'
+    yellow:  '0xc4a227'
+    blue:    '0x5294e2'
+    magenta: '0x8a44a1'
+    cyan:    '0x2ab19f'
+    white:   '0x5f6367'
+  bright:
+    black:   '0x373b41'
+    red:     '0xf93e3e'
+    green:   '0x28e12a'
+    yellow:  '0xeec73c'
+    blue:    '0x50a0ff'
+    magenta: '0xae6bc2'
+    cyan:    '0x50decb'
+    white:   '0xbbbbbb'

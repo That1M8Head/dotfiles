@@ -10,6 +10,8 @@ client.focused_inactive	    #383c4a #404552 #aaaaaa
 exec --no-startup-id feh     --bg-fill $HOME/nep-wallpaper.jpg 
 exec --no-startup-id polybar arc-dark-t1m8
 
+bindsym $mod+l exec --no-startup-id slock
+
 # Usual stuff
 set $mod Mod4
 
@@ -31,20 +33,10 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -52,7 +44,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+h split h
-
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle

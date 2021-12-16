@@ -40,7 +40,7 @@ scroll-down = i3wm-wsprev
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 150
+label-maxlen = 70
 label-empty = i3-gaps
 
 [module/filesystem]

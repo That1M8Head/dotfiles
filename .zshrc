@@ -3,7 +3,10 @@
 # zsh prompt
 precmd() { print -rP "%B%F{#4d5eff}%n%f%b on %B%F{#ff4db6}%M %f%b% at %~" }
 export PROMPT="> "
-alias cd..=cd ..
+
+# Aliases
+alias cd..="cd .."
+alias ls="ls --color=auto -F"
 
 ### End of custom stuff ###
 

@@ -5,3 +5,10 @@
 	email = sonicspeed848@gmail.com
 [credential]
 	helper = store
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gui]
+	recentrepo = /home/that1m8head/dmenu

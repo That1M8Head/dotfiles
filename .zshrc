@@ -1,12 +1,22 @@
 ### Arsalan Kazmi's .zshrc config ###
 
 # zsh prompt
-precmd() { print -rP "%B%F{#4d5eff}%n%f%b on %B%F{#ff4db6}%M %f%b% at %~" }
+precmd() { print -rP "%B%F{#5635b8}%n%f%b on %B%F{#5d00ff}%M %f%b% at %B%F{#8d72db}%~%f%b%" }
 export PROMPT="> "
 
 # Aliases
 alias cd..="cd .."
 alias ls="ls --color=auto -F"
+alias ed="ed -vp 'ed > '"
+
+# Doom Emacs executable
+export PATH=$PATH:/home/that1m8head/.emacs.d/bin/
+
+# Neofetch with nep in it
+alias nepfetch="neofetch --w3m ~/Pictures/nepu.jpg; echo"
+
+# pfetch on startup
+pfetch
 
 ### End of custom stuff ###
 
@@ -14,7 +24,7 @@ alias ls="ls --color=auto -F"
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd
+setopt appendhistory 
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install

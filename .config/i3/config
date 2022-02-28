@@ -1,15 +1,20 @@
 # Arsalan Kazmi's i3 config
 default_border none
 
-gaps inner 10 
+gaps inner 20 
+gaps inner 40 
 
-client.focused		    	#383c4a #404552 #ffffff
-client.unfocused    	    #383c4a #404552 #999999
-client.focused_inactive	    #383c4a #404552 #aaaaaa
+client.focused            #383c4a #404552 #ffffff
+client.unfocused          #383c4a #404552 #999999
+client.focused_inactive   #383c4a #404552 #aaaaaa
 
-exec --no-startup-id feh     --bg-fill $HOME/nep-wallpaper.jpg 
-exec --no-startup-id polybar arc-dark-t1m8
+exec --no-startup-id wal     -i $HOME/Pictures/purple-heart-.jpg 
+exec --no-startup-id polybar that1m8bar
 exec --no-startup-id mplayer $HOME/winxpstartup.mp3
+
+exec --no-startup-id setxkbmap gb
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id xrdb      Xresources
 
 # Usual stuff
 set $mod Mod4
@@ -20,7 +25,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
 exec --no-startup-id nm-applet
 
-bindsym $mod+l exec slock
+bindsym $mod+Mod1+l exec slock
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -30,22 +35,22 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 floating_modifier $mod
 
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec urxvt 
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
+# bindsym $mod+h split h
+# bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
@@ -97,14 +102,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-msg exit"
 
 mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"

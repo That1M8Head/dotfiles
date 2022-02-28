@@ -1,12 +1,12 @@
 ; Arsalan Kazmi's polybar config
 
 [colours]
-background = #404552
+background = #16161a
 foreground = #ffffff
-blue = #5294e2
-red  = #dd0000
+highlight = #5d00ff
+error = #dd0000
 
-[bar/arc-dark-t1m8]
+[bar/that1m8bar]
 width = 100%
 height = 27
 radius = 0.0
@@ -27,7 +27,7 @@ padding-right = 1
 module-margin-left = 1 
 module-margin-right = 1
 
-font-0 = Source Code Pro:size=10;1
+font-0 = Cascadia Code PL:size=10;1
 font-1 = Font Awesome 5 Free:size=10;1
 
 modules-left = i3
@@ -51,7 +51,7 @@ interval = 25
 mount-0 = /
 
 label-mounted = Disk: %percentage_used%%
-label-mounted-underline = ${colours.blue}
+label-mounted-underline = ${colours.highlight}
 
 [module/i3]
 type = internal/i3
@@ -64,21 +64,21 @@ wrapping-scroll = false
 
 label-mode-padding = 0 
 label-mode-foreground = #000
-label-mode-background = ${colours.blue}
+label-mode-background = ${colours.highlight}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colours.blue}
+label-focused-background = ${colours.highlight}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-underline = ${colours.blue}
+label-unfocused-underline = ${colours.highlight}
 label-unfocused-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colours.red}
+label-urgent-background = ${colours.error}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -88,20 +88,20 @@ label-urgent-padding = 2
 type = internal/cpu
 interval = 2
 label = CPU usage: %percentage:2%%
-label-underline = ${colours.blue}
+label-underline = ${colours.highlight}
 
 [module/memory]
 type = internal/memory
 interval = 2
 label = Memory: %percentage_used%%
-label-underline = ${colours.blue}
+label-underline = ${colours.highlight}
 
 [module/wlan]
 type = internal/network
 interface = wlan0
 interval = 3.0
-format-connected-underline = ${colours.blue}
-format-disconnected-underline = ${colours.red}
+format-connected-underline = ${colours.highlight}
+format-disconnected-underline = ${colours.error}
 
 format-connected = <label-connected>
 label-connected = Connected to %essid%
@@ -123,8 +123,8 @@ ramp-signal-foreground = ${colours.foreground-alt}
 type = internal/network
 interface = enp5s0
 interval = 3.0
-format-connected-underline = ${colours.blue}
-format-disconnected-underline = ${colours.red}
+format-connected-underline = ${colours.highlight}
+format-disconnected-underline = ${colours.error}
 
 label-connected = %local_ip%
 
@@ -142,7 +142,7 @@ date = %d/%m/%Y
 time = %l:%M %p
 
 label = %date% %time%
-label-underline = ${colours.blue}
+label-underline = ${colours.highlight}
 
 [module/battery]
 type = internal/battery

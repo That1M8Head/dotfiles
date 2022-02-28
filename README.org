@@ -2,3 +2,14 @@
 #+Author: Arsalan Kazmi
 
 This repo contains my dotfiles... from a semi-broken laptop. Yeah, I'll have it overhauled when I can get an actually good computer to run Arch on.
+
+#+begin_src c
+#include <stdio.h>
+
+int main(int argc, char* argv[])
+{
+    char* msg = "Here's some random C!";
+    printf("%s\n", msg);
+    return 0;
+}
+#+end_src

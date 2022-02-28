@@ -1,11 +1,11 @@
 # Arsalan Kazmi's Alacritty config
 window:
   padding:
-    x: 8
-    y: 5
+    x: 16
+    y: 16
 font:
   normal:
-    family: Source Code Pro 
+    family: Cascadia Code PL 
 colors:
   primary:
     background: '0x171b25'

@@ -1,25 +1,26 @@
 # Arsalan Kazmi's i3 config
-default_border none
+default_border pixel 5
 
 gaps inner 20 
-gaps inner 40 
+gaps inner 40
 
-client.focused            #383c4a #404552 #ffffff
-client.unfocused          #383c4a #404552 #999999
-client.focused_inactive   #383c4a #404552 #aaaaaa
+# class                   border  backgr. text    indicator child_border
+client.focused            #5534b7 #5534b7 #ffffff #5534b7   #5534b7
+client.unfocused          #333333 #333333 #ffffff #333333   #333333
+client.focused_inactive   #333333 #333333 #333333 #333333   #333333
 
 exec --no-startup-id wal     -i $HOME/Pictures/purple-heart-.jpg 
 exec --no-startup-id polybar that1m8bar
 exec --no-startup-id mplayer $HOME/winxpstartup.mp3
 
 exec --no-startup-id setxkbmap gb
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xrdb      Xresources
+exec --no-startup-id ~/caps-ctrl.sh
+exec --no-startup-id xrdb Xresources
 
 # Usual stuff
 set $mod Mod4
 
-font pango:Source Code Pro 10 
+font pango:Cascadia Code 12
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
@@ -37,7 +38,8 @@ floating_modifier $mod
 
 bindsym $mod+Return exec urxvt 
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -99,7 +101,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+e exec "rofi -show p -modi p:~/.local/bin/rofi-power-menu"
 
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt

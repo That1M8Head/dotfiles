@@ -9,8 +9,8 @@ alias cd..="cd .."
 alias ls="ls --color=auto -F"
 alias ed="ed -vp 'ed > '"
 
-# Doom Emacs executable
-export PATH=$PATH:/home/that1m8head/.emacs.d/bin/
+# PATH
+export PATH=$PATH:/home/that1m8head/.emacs.d/bin/:/home/that1m8head/.local/bin
 
 # Neofetch with nep in it
 alias nepfetch="neofetch --w3m ~/Pictures/nepu.jpg; echo"

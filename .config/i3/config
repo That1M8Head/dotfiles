@@ -9,7 +9,7 @@ client.focused            #5534b7 #5534b7 #ffffff #5534b7   #5534b7
 client.unfocused          #333333 #333333 #ffffff #333333   #333333
 client.focused_inactive   #333333 #333333 #333333 #333333   #333333
 
-exec --no-startup-id wal     -i $HOME/Pictures/purple-heart-.jpg 
+exec --no-startup-id feh --bg-fill $HOME/Pictures/purple-heart-.jpg
 exec --no-startup-id polybar that1m8bar
 exec --no-startup-id mplayer $HOME/winxpstartup.mp3
 

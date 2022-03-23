@@ -1,8 +1,8 @@
 # Arsalan Kazmi's i3 config
 default_border pixel 5
 
-gaps inner 20 
-gaps inner 40
+gaps inner 15 
+gaps outer 20
 
 # class                   border  backgr. text    indicator child_border
 client.focused            #5534b7 #5534b7 #ffffff #5534b7   #5534b7
@@ -112,6 +112,7 @@ mode "resize" {
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
+        bindsym q mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"

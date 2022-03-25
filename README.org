@@ -3,4 +3,21 @@
 
 This repo hosts my dotfiles. Obviously, right?
 
-Unless you're me, you probably don't want these for your own system.
+** Prerequisites
+*** OS
++ [[https://archlinux.org][Arch Linux]] (any GNU/Linux distro should work)
+*** Terminal
++ [[https://wiki.archlinux.org/title/Rxvt-unicode][urxvt]]
++ [[https://alacritty.org/][alacritty]] (optional)
++ [[https://www.zsh.org/][zsh]]
++ [[https://docs.microsoft.com/en-us/windows/terminal/cascadia-code][Cascadia Code PL]] (it's not software but still)
++ [[https://github.com/dylanaraps/pfetch][pfetch]]
++ [[https://github.com/dylanaraps/neofetch][neofetch]] (optional)
++ [[https://github.com/busyloop/lolcat][lolcat]]
+*** WM
++ [[https://github.com/Airblader/i3][i3-gaps]]
++ [[https://github.com/yshui/picom][picom]]
++ [[https://polybar.github.io/][polybar]]
++ [[https://github.com/davatorium/rofi][rofi]]
+*** Applications
++ [[https://qutebrowser.org/][qutebrowser]]

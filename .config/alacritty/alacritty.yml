@@ -1,8 +1,8 @@
 # Arsalan Kazmi's Alacritty config
 window:
   padding:
-    x: 10
-    y: 10
+    x: 20
+    y: 20
 font:
   normal:
     family: Cascadia Code PL 
@@ -10,7 +10,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
+    background: '0x262626'
     foreground: '0xf8f8f2'
 
   # Normal colors

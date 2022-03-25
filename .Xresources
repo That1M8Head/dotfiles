@@ -13,7 +13,7 @@ URxvt.depth: 24
 URxvt.iso14755: false
 
 *.foreground: #F8F8F2
-*.background: #282A36
+*.background: #262626
 *.cursorColor: #A786E1
 
 *.color0:     #000000

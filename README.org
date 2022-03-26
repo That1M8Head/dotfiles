@@ -13,7 +13,6 @@ This repo hosts my dotfiles. Obviously, right?
 + [[https://docs.microsoft.com/en-us/windows/terminal/cascadia-code][Cascadia Code PL]] (it's not software but still)
 + [[https://github.com/dylanaraps/pfetch][pfetch]]
 + [[https://github.com/dylanaraps/neofetch][neofetch]] (optional)
-+ [[https://github.com/busyloop/lolcat][lolcat]]
 *** WM
 + [[https://github.com/Airblader/i3][i3-gaps]]
 + [[https://github.com/yshui/picom][picom]]

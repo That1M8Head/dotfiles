@@ -1,5 +1,5 @@
 !! URxvt Appearance
-URxvt.font: xft:Cascadia Code PL:style=Regular:size=11.5
+URxvt.font: xft:Iosevka Extended:style=Regular:size=11
 URxvt.lineSpace: 1
 URxvt.geometry: 92x24
 URxvt.internalBorder: 20

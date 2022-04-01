@@ -1,9 +1,13 @@
 # Arsalan Kazmi's i3 config
+
+# Border
 default_border pixel 5
 
+# Gaps
 gaps inner 15 
 gaps outer 20
 
+# Colours
 # class                   border  backgr. text    indicator child_border
 client.focused            #5534b7 #5534b7 #ffffff #5534b7   #5534b7
 client.unfocused          #333333 #333333 #ffffff #333333   #333333
@@ -27,17 +31,16 @@ exec --no-startup-id xrdb Xresources
 set $mod Mod4
 
 # Font
-font pango:Cascadia Code 12
+font pango:Iosevka Extended 10
 
 # I'm not sure what this does
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
-exec --no-startup-id nm-applet
 
 # Lock the screen (Victory+Alt+L)
 bindsym $mod+Mod1+l exec slock
 
-# Not sure what this does either
+# i3status thing
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # Victory + mouse makes windows move(?)
@@ -45,30 +48,35 @@ floating_modifier $mod
 
 # Keybinds
 bindsym $mod+Return exec urxvt 
-bindsym $mod+Shift+q kill
+
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
-bindsym $mod+e exec "emacs"
-bindsym $mod+v exec "gvim"
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+b exec qutebrowser
+bindsym $mod+e exec emacs
+bindsym $mod+v exec gvim
+
+bindsym $mod+w layout tabbed
+bindsym $mod+x layout default
+bindsym $mod+s layout stacking
+
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "rofi -show p -modi p:~/.local/bin/rofi-power-menu"
 
 # Vi keybinds for window manipulation
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# Other keybinds
-bindsym $mod+f fullscreen toggle
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+b layout toggle split
-bindsym $mod+space focus mode_toggle
-bindsym $mod+Shift+space floating toggle
 
 # Set workspace names(?)
 set $ws1 "1"
@@ -104,11 +112,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-
-# Restarting and exiting
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "rofi -show p -modi p:~/.local/bin/rofi-power-menu"
 
 # Resizing
 mode "resize" {

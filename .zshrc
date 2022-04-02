@@ -10,7 +10,7 @@ export PROMPT="%F{${promptcolour}}~> %f"
 
 # Aliases
 alias cd..="cd .."
-alias ls="ls --color=auto -F"
+alias ls="exa --colour=always -lahF"
 alias ed="ed -vp 'ed > '"
 alias rlconfig="clear; source $HOME/.zshrc"
 alias git-dotf='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME/'
@@ -19,7 +19,7 @@ alias emacsc="emacsclient -c"
 alias emacst="emacsclient -t"
 
 # PATH
-export PATH=$PATH:$HOME/doom-emacs/bin/:/home/that1m8head/.local/bin
+export PATH=$PATH:$HOME/doom-emacs/bin/:$HOME/.local/bin:$HOME/.cargo/bin
 
 # Startup script
 m_startup() { pfetch; echo " Welcome to the next level\n" }

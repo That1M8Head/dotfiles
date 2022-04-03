@@ -38,7 +38,6 @@ font pango:Iosevka Extended 10
 
 # I'm not sure what this does
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
 
 # Lock the screen (Victory+Alt+L)
 bindsym $mod+Mod1+l exec slock
@@ -50,7 +49,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # Keybinds
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec kitty
 
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run

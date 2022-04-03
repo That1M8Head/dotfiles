@@ -5,9 +5,10 @@ This repo hosts my dotfiles. Obviously, right?
 
 ** Prerequisites
 *** OS
-+ [[https://archlinux.org][Arch Linux]] (any GNU/Linux distro should work)
++ [[https://archlinux.org][Arch Linux]] (recommended, but any GNU/Linux distro should work)
 *** Terminal
-+ [[https://wiki.archlinux.org/title/Rxvt-unicode][urxvt]]
++ [[https://sw.kovidgoyal.net/kitty/][kitty]]
++ [[https://wiki.archlinux.org/title/Rxvt-unicode][urxvt]] (optional)
 + [[https://alacritty.org/][alacritty]] (optional)
 + [[https://www.zsh.org/][zsh]]
 + [[https://github.com/dylanaraps/pfetch][pfetch]]
@@ -16,6 +17,7 @@ This repo hosts my dotfiles. Obviously, right?
 + [[https://github.com/Airblader/i3][i3-gaps]]
 + [[https://github.com/yshui/picom][picom]]
 + [[https://polybar.github.io/][polybar]]
++ [[https://github.com/brndnmtthws/conky][conky]]
 + [[https://github.com/davatorium/rofi][rofi]]
 *** Applications
 + [[https://qutebrowser.org/][qutebrowser]]

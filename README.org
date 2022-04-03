@@ -10,7 +10,6 @@ This repo hosts my dotfiles. Obviously, right?
 + [[https://wiki.archlinux.org/title/Rxvt-unicode][urxvt]]
 + [[https://alacritty.org/][alacritty]] (optional)
 + [[https://www.zsh.org/][zsh]]
-+ [[https://docs.microsoft.com/en-us/windows/terminal/cascadia-code][Cascadia Code PL]] (it's not software but still)
 + [[https://github.com/dylanaraps/pfetch][pfetch]]
 + [[https://github.com/dylanaraps/neofetch][neofetch]] (optional)
 *** WM

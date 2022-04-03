@@ -19,6 +19,9 @@ exec --no-startup-id feh --bg-fill $HOME/Pictures/purple-heart-.jpg
 # Polybar
 exec --no-startup-id polybar that1m8bar
 
+# Conky
+exec --no-startup-id conky
+
 # Startup sound
 exec --no-startup-id mplayer $HOME/winxpstartup.mp3
 

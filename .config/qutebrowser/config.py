@@ -12,6 +12,7 @@ c.bindings.commands['normal'] = {
     '<space>t': 'open -t',
     '<space>qq': 'quit',
     '<space>qr': 'restart',
+    '<space>w': 'spawn -d mpv {url}',
 }
 c.editor.command = ['gvim', '{file}']
 config.set("colors.webpage.preferred_color_scheme", "dark")
@@ -29,4 +30,3 @@ config.set("colors.tabs.even.bg", "black")
 config.set("downloads.remove_finished", 10)
 c.tabs.padding = {"bottom": 5, "left": 10, "right": 10, "top": 5}
 c.statusbar.padding = {"bottom": 5, "left": 10, "right": 10, "top": 5}
-

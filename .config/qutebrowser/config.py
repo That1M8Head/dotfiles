@@ -12,7 +12,8 @@ c.bindings.commands['normal'] = {
     '<space>t': 'open -t',
     '<space>qq': 'quit',
     '<space>qr': 'restart',
-    '<space>w': 'spawn -d mpv {url}',
+    '<space>yw': 'spawn -d mpv {url}',
+    '<space>ya': 'spawn -d mpv -x {url}',
 }
 c.editor.command = ['gvim', '{file}']
 config.set("colors.webpage.preferred_color_scheme", "dark")

@@ -14,7 +14,7 @@ client.unfocused          #333333 #333333 #ffffff #333333   #333333
 client.focused_inactive   #333333 #333333 #333333 #333333   #333333
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill $HOME/Pictures/purple-heart-.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/purple-heart-.jpg
 
 # Polybar
 exec --no-startup-id polybar that1m8bar
@@ -34,7 +34,7 @@ exec --no-startup-id xrdb Xresources
 set $mod Mod4
 
 # Font
-font pango:Iosevka Extended 10
+font pango:JetBrains Mono 10
 
 # I'm not sure what this does
 exec --no-startup-id dex --autostart --environment i3

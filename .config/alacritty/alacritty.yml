@@ -5,7 +5,7 @@ window:
     y: 20
 font:
   normal:
-    family: Cascadia Code PL 
+    family: JetBrains Mono NL
   size: 11
 colors:
   # Default colors

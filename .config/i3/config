@@ -1,7 +1,7 @@
 # Arsalan Kazmi's i3 config
 
 # Border
-default_border pixel 5
+default_border pixel 2
 
 # Gaps
 gaps inner 15 
@@ -14,7 +14,7 @@ client.unfocused          #333333 #333333 #ffffff #333333   #333333
 client.focused_inactive   #333333 #333333 #333333 #333333   #333333
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/purple-heart-.jpg
+exec --no-startup-id nitrogen --restore
 
 # Polybar
 exec --no-startup-id polybar that1m8bar
@@ -51,24 +51,19 @@ floating_modifier $mod
 # Keybinds
 bindsym $mod+Return exec kitty
 
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run
+bindsym $mod+p exec i3-dmenu-desktop
+bindsym $mod+Shift+p exec dmenu_run
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+b exec qutebrowser
-bindsym $mod+e exec emacs
-bindsym $mod+v exec gvim
 
 bindsym $mod+w layout tabbed
 bindsym $mod+x layout default
 bindsym $mod+s layout stacking
 
-bindsym $mod+Shift+q kill
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c kill
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "rofi -show p -modi p:~/.local/bin/rofi-power-menu"
+bindsym $mod+Shift+e exec "i3-msg exit"
 
 # Vi keybinds for window manipulation
 bindsym $mod+h focus left

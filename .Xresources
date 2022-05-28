@@ -39,3 +39,5 @@ URxvt.iso14755: false
 
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+Xft.dpi: 100

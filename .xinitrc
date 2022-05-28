@@ -1,2 +1,3 @@
 setxkbmap gb
-exec i3
+exec /usr/bin/tinywm &
+st

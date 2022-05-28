@@ -1,0 +1,5 @@
+#!/bin/sh
+export QT_QPA_PLATFORMTHEME=qt5ct
+xrdb .Xresources
+xrandr -s 1360x768
+nitrogen --restore

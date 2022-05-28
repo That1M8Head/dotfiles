@@ -46,11 +46,32 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.font = "JetBrains Mono 10"
+
+beautiful.font          = "JetBrains Mono 10"
+
+accentcolour            = "#932f34"
+bordercolour            = "#ff605b"
+
+beautiful.bg_normal     = "#222222"
+beautiful.bg_focus      = accentcolour
+beautiful.bg_urgent     = "#ff0000"
+beautiful.bg_minimize   = "#444444"
+beautiful.bg_systray    = beautiful.bg_normal
+
+beautiful.fg_normal     = "#aaaaaa"
+beautiful.fg_focus      = "#ffffff"
+beautiful.fg_urgent     = "#ffffff"
+beautiful.fg_minimize   = "#ffffff"
+
+beautiful.useless_gap   = 20
+beautiful.border_width  = 1
+beautiful.border_normal = "#bbbbbb"
+beautiful.border_focus  = bordercolour
+beautiful.border_marked = accentcolour
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
-editor = "emacs"
+terminal   = "kitty"
+editor     = "emacs"
 editor_cmd = editor
 
 -- Default modkey.
@@ -564,5 +585,4 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-beautiful.useless_gap = 20
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")

@@ -9,3 +9,4 @@ run() {
 
 run nitrogen --restore
 run conky
+run mplayer $HOME/winxpstartup.mp3

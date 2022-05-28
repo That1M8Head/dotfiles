@@ -8,10 +8,10 @@ gaps inner 15
 gaps outer 20
 
 # Colours
-# class                   border  backgr. text    indicator child_border
-client.focused            #5534b7 #5534b7 #ffffff #5534b7   #5534b7
-client.unfocused          #333333 #333333 #ffffff #333333   #333333
-client.focused_inactive   #333333 #333333 #333333 #333333   #333333
+# class                   border  backgr. text  indicator child_border
+client.focused            #ff605b #ff605b #ffffff #ff605b #ff605b
+client.unfocused          #333333 #333333 #ffffff #333333 #333333
+client.focused_inactive   #333333 #333333 #333333 #333333 #333333
 
 # Wallpaper
 exec --no-startup-id nitrogen --restore

@@ -49,10 +49,10 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 beautiful.font          = "JetBrains Mono 10"
 
-accentcolour            = "#932f34"
-bordercolour            = "#ff605b"
+accentcolour            = "#2262b0"
+bordercolour            = "#38b0dd"
 
-beautiful.bg_normal     = "#222222"
+beautiful.bg_normal     = "#111111"
 beautiful.bg_focus      = accentcolour
 beautiful.bg_urgent     = "#ff0000"
 beautiful.bg_minimize   = "#444444"
@@ -63,9 +63,9 @@ beautiful.fg_focus      = "#ffffff"
 beautiful.fg_urgent     = "#ffffff"
 beautiful.fg_minimize   = "#ffffff"
 
-beautiful.useless_gap   = 20
-beautiful.border_width  = 1
-beautiful.border_normal = "#bbbbbb"
+beautiful.useless_gap   = 10
+beautiful.border_width  = 3
+beautiful.border_normal = "#444444"
 beautiful.border_focus  = bordercolour
 beautiful.border_marked = accentcolour
 
@@ -84,17 +84,13 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-<<<<<<< HEAD
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     awful.layout.suit.floating,
-=======
-    awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
->>>>>>> 1e2812e (Updated awesome config)
     awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
@@ -475,7 +471,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = 4,
+      properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -591,14 +587,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-<<<<<<< HEAD
-
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-=======
- 
--- Gaps
-beautiful.useless_gap = 10
 
 -- Autostart
-awful.util.spawn("nitrogen --restore")
->>>>>>> 1e2812e (Updated awesome config)
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")

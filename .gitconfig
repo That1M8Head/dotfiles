@@ -12,3 +12,5 @@
 	smudge = git-lfs smudge -- %f
 [gui]
 	recentrepo = /home/that1m8head/dmenu
+[pull]
+	rebase = true

@@ -84,10 +84,17 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
+<<<<<<< HEAD
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     awful.layout.suit.floating,
+=======
+    awful.layout.suit.floating,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+>>>>>>> 1e2812e (Updated awesome config)
     awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
@@ -468,7 +475,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
+      properties = { border_width = 4,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -584,5 +591,14 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+<<<<<<< HEAD
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+=======
+ 
+-- Gaps
+beautiful.useless_gap = 10
+
+-- Autostart
+awful.util.spawn("nitrogen --restore")
+>>>>>>> 1e2812e (Updated awesome config)
